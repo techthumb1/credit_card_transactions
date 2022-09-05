@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CCTA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>CCTA</h1>
+                <p>Credit Card Transaction Analyzer is a web application that allows financial institutions to detect fraudulent transactions in real time using predictive analysis. 
+                  It is comprised of state-of-the-art articifical lintelligence software giving it's users a greater level of accuracy and precision.</p>
+                <p>Please enter username and password to for access to full features.</p>
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="customer">Customer Name</label>
+                        <input type="text" class="form-control" id="customer" name="customer" placeholder="Enter customer name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              <div class="container" style="margin-top:2em;">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h4>Features</h4>
+                    <p>1. Real-time transaction monitoring</p>
+                    <p>2. Predictive analysis</p>
+                    <p>3. Fraud detection</p>
+                    <p>4. User-friendly interface</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <!-- PAGE CONTENTS -->
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <!-- FOOTER -->
+      <div id="footer">
+        <hr>
+        &copy; Copyright 2022 Jason Robinson |
+        <a href="https://github.com/techthumb1/Credit-Card-Feature-Analyzer">source</a>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT SECTION -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        console.log("Thank you for visiting today!")
+
+        // closes data-dismiss="alert" flash messages
+        // see: https://getbootstrap.com/docs/4.3/components/alerts/#javascript-behavior
+        //$().alert('close')
+
+    </script>
+  </body>
+
+
+</html>
