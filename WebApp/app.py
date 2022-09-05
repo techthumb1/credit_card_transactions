@@ -6,16 +6,22 @@ from sklearn.preprocessing import StandardScaler
 
 
 app = Flask(__name__,static_url_path='/static')
-model = pickle.load(open('classification_model.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+model = os.path.join(os.path.dirname(__file__), "stat_models", "classification_model.pkl")
+#scaler = pickle.load(open('scaler.pkl', 'rb'))
+
+# Standardize the data
+scaler = StandardScaler()
+#scaler.fit(X)
+#X = scaler.transform(X)
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+
 @app.route('/predict',methods=['POST'])
 def predict():
-
     features = [float(x) for x in request.form.values()]
     final_features = [np.array(features)]
     final_features = scaler.transform(final_features)    

@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+scikit-learn = "*"
+pandas = "*"
+tensorflow = "*"
+flask = "==2.1.0"
+jinja2 = "==3.0.0"
+lightgbm = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
